@@ -1,4 +1,6 @@
 <h1><%= @project.title %></h1>
+<h5>Posted on <%= @project.date_published %></h5>
+
 <%= image_tag @project.image.url(:large) if @project.image.url(:large).present? %>
 <p><%= @project.description %></p>
 
