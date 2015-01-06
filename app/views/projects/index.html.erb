@@ -1,10 +1,10 @@
 <h1>All projects</h1>
 <p><%= link_to "Add new project", new_project_path %></p>
 <ul>
-  <% @projects.each do |project| %>
+  <% @projects.each do |p| %>
     <li>
-      <%= link_to project.title, project %>
-      <%= link_to "Edit", edit_project_path(project) %>
+      <%= image_tag p.image.url(:small) if p.image.url(:small).present? %>
+      <br>
     </li>
   <% end %>
 </ul>
